@@ -51,21 +51,21 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hey {}, I am {}!* 
-*A multipurpose group management bot, themed from* [Darling In The FranXX](https://t.me/Anime_Collectors/2336)!
+*Hey {}, I am {nino}!* 
+*A multipurpose group management bot, themed from* [5 tobun no hayame](https://t.me/Anime_Collectors/2336)!
 
 """
 
 HELP_STRINGS = """
-[Kurisu](https://telegra.ph/file/bf139ffe9de3b964fe26c.gif) comes with Different Features which can Help you in managing Anime related groups Some of the Main features are :-
+[Nino](https://te.legra.ph/file/f7325795ab2d275d1e3e0.jpg) comes with Different Features which can Help you in managing Anime related groups Some of the Main features are :-
 *Anime*, *Music*, *Notes*, *Filters* and *NSFW* functions!
 • __All commands can either be used with__ `/` __or__ `!`.
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-KURISU_IMG = "https://telegra.ph/file/ff7be878c5a5b16ef2d5d.gif"
-KURISUIMGSTART = "https://telegra.ph/file/ff7be878c5a5b16ef2d5d.gif"
+Nino_IMG = "https://te.legra.ph/file/64c3a08fc0828210d8819.jpg"
+NINOIMGSTART = "https://te.legra.ph/file/e86b5c06b8ac12505b35a.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer of the Base code, Paul
@@ -178,7 +178,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_animation(
-                KURISU_IMG,
+                Nino_IMG,
                 caption=PM_START_TEXT.format(
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name)),
@@ -216,7 +216,7 @@ def start(update: Update, context: CallbackContext):
                     ]]))
     else:
         update.effective_message.reply_video(
-                KURISUIMGSTART)
+                NINOIMGSTART)
         update.effective_message.reply_text(
             "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
             .format(uptime),
